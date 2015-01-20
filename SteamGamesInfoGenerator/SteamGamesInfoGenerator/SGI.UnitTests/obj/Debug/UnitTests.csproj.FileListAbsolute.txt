@@ -1,0 +1,1 @@
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\obj\Debug\UnitTests.csprojResolveAssemblyReference.cache

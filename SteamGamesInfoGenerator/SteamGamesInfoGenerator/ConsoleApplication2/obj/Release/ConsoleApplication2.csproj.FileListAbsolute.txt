@@ -1,0 +1,10 @@
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\ConsoleApplication2.exe.config
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\ConsoleApplication2.exe
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\ConsoleApplication2.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\Newtonsoft.Json.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\Core.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\bin\Release\Newtonsoft.Json.xml
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\obj\Release\ConsoleApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\obj\Release\ConsoleApplication2.exe
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\ConsoleApplication2\obj\Release\ConsoleApplication2.pdb

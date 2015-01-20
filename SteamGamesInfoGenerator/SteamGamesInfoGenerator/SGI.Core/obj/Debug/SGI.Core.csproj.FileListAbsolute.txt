@@ -1,0 +1,7 @@
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Debug\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Debug\Core.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\obj\Debug\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\obj\Debug\Core.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\obj\Debug\SGI.Core.csprojResolveAssemblyReference.cache

@@ -1,0 +1,6 @@
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Release\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Release\Core.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Release\Newtonsoft.Json.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\bin\Release\Newtonsoft.Json.xml
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\obj\Release\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Core\obj\Release\Core.pdb

@@ -1,0 +1,14 @@
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\SteamGamesIngoGeneratorTests.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\SteamGamesIngoGeneratorTests.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\Core.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\Core.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\obj\Debug\SGI.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\obj\Debug\SteamGamesIngoGeneratorTests.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SteamGamesIngoGeneratorTests\obj\Debug\SteamGamesIngoGeneratorTests.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\SGI.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.pdb
