@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using SGI.Core;
 using SGI.Core.GameInfo;
 
 namespace ConsoleApplication2
 {
-    class Program
+    internal class Program
     {
         private static void Main(string[] args)
         {
@@ -28,8 +31,15 @@ namespace ConsoleApplication2
             var unfound = gameInfoNameList.Where(x => !filteredNames.Contains(x));
             foreach (var f in unfound)
                 Console.WriteLine(f);
-            
-            var prices = GetPriceOverViews(steamApps.Take(2500).Select(f => f.AppId.ToString()));
+            var prices1 =
+                GetPricesV2(steamApps.Take(100).Select(f => f.AppId.ToString()))
+                    .Where(t => t.Currency != null)
+                    .ToList();
+            //var prices2 =
+            //    GetPriceOverViews(steamApps.Take(1000).Select(f => f.AppId.ToString()))
+            //        .Where(t => t.Currency != null)
+            //        .ToList();
+           
             Console.ReadLine();
         }
 
@@ -37,17 +47,24 @@ namespace ConsoleApplication2
         {
             var stopWatch = new Stopwatch();
             stopWatch.Start();
-            var priceOverviews = GetPriceOverviewForApps(appsId); 
-          
+            var steamClient = new SteamClient();
+            var priceOverviews = steamClient.GetPriceOverviewAsync(appsId);
+
             stopWatch.Stop();
-            Console.WriteLine("Requests sent: {0}, Time elapsed: {1} milliseconds", appsId.Count(), stopWatch.ElapsedMilliseconds);
+            Console.WriteLine("Requests sent: {0}, Time elapsed: {1} milliseconds", appsId.Count(),
+                stopWatch.ElapsedMilliseconds);
             Console.WriteLine("Avg. time spent per request: {0}", stopWatch.ElapsedMilliseconds/appsId.Count());
             return priceOverviews;
         }
+
         private static IEnumerable<GameInfo> GetGameInfoFromFiles()
         {
-            var fileOne = System.IO.File.ReadAllLines(@"C:\Users\Bohdan\AppData\Roaming\Skype\My Skype Received Files\steam-games.txt");
-            var fileTwo = System.IO.File.ReadAllLines(@"C:\Users\Bohdan\AppData\Roaming\Skype\My Skype Received Files\UWrKVVCa4KTyfFQ.txt");
+            var fileOne =
+                System.IO.File.ReadAllLines(
+                    @"C:\Users\Bohdan\AppData\Roaming\Skype\My Skype Received Files\steam-games.txt");
+            var fileTwo =
+                System.IO.File.ReadAllLines(
+                    @"C:\Users\Bohdan\AppData\Roaming\Skype\My Skype Received Files\UWrKVVCa4KTyfFQ.txt");
             var merge = fileOne.Union(fileTwo).ToArray();
 
             Console.WriteLine("Lines in file 1:{0}", fileOne.Length);
@@ -64,10 +81,20 @@ namespace ConsoleApplication2
             return steamApplications.AppList.Apps;
         }
 
-        private static IEnumerable<PriceOverview> GetPriceOverviewForApps(IEnumerable<string> appIds)
+        private static IEnumerable<PriceOverview> GetPricesV2(IEnumerable<string> appIds)
         {
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
             var steamClient = new SteamClient();
-            return steamClient.GetPriceOverviewAsync(appIds);
+            var results = new List<PriceOverview>();
+            var enumerable = appIds as string[] ?? appIds.ToArray();
+            enumerable.ForEachAsync(s => steamClient.GetPriceOverview(s, "ru"), (url, t) => results.Add(t));
+            stopWatch.Stop();
+            Console.WriteLine("Requests sent: {0}, Time elapsed: {1} milliseconds", enumerable.Count(),
+                stopWatch.ElapsedMilliseconds);
+            Console.WriteLine("Avg. time spent per request: {0}", stopWatch.ElapsedMilliseconds / enumerable.Count());
+            return results;
         }
     }
+
 }

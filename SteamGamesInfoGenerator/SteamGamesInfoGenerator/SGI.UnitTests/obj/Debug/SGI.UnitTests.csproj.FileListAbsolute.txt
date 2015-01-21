@@ -12,3 +12,8 @@ C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.Unit
 C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\SGI.UnitTests.csprojResolveAssemblyReference.cache
 C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.dll
 C:\Users\Bohdan\Desktop\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.pdb
+C:\Users\Bohdan\Desktop\SGI\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\bin\Debug\UnitTests.dll
+C:\Users\Bohdan\Desktop\SGI\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\bin\Debug\UnitTests.pdb
+C:\Users\Bohdan\Desktop\SGI\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\SGI.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Bohdan\Desktop\SGI\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.dll
+C:\Users\Bohdan\Desktop\SGI\SteamGamesInfoGenerator\SteamGamesInfoGenerator\SGI.UnitTests\obj\Debug\UnitTests.pdb
