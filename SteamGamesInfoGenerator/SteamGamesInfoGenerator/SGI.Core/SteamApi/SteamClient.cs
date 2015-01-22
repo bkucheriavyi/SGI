@@ -4,14 +4,11 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Threading;
 using System.Threading.Tasks;
-using ConsoleApplication2;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-
-namespace SGI.Core
+namespace SGI.Core.SteamApi
 {
     public class SteamClient
     {

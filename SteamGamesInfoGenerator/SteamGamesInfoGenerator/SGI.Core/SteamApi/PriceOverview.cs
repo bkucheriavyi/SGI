@@ -1,4 +1,6 @@
-﻿namespace ConsoleApplication2
+﻿using System;
+
+namespace SGI.Core.SteamApi
 {
     //"price_overview": {
     //            "currency": "RUB",
@@ -12,5 +14,7 @@
         public string Initial { get; set; }
         public string Final { get; set; }
         public string Discount_Percent { get; set; }
+
+        public Exception Exception { get; set; }
     }
 }

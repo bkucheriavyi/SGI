@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace SGI.Core
+﻿namespace SGI.Core.SteamApi
 {
     public class SteamGames
     {

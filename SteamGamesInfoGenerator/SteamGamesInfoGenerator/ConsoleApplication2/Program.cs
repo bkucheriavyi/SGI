@@ -1,14 +1,11 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using SGI.Core;
 using SGI.Core.GameInfo;
+using SGI.Core.SteamApi;
 
 namespace ConsoleApplication2
 {
@@ -20,26 +17,17 @@ namespace ConsoleApplication2
             var steamApps = GetSteamAppsList().ToList();
 
             Console.WriteLine("Steam apps cout : {0}", steamApps.Count);
-            var gameInfoNameList = new HashSet<string>(gameInfoList.Select(x => x.Name));
-            var filtered = steamApps.Where(x => gameInfoNameList.Contains(x.Name)).ToList();
-            var filteredNames = new HashSet<string>(filtered.Select(x => x.Name));
 
-            Console.WriteLine("Found: {0}", filteredNames.Count());
-            foreach (var f in filteredNames)
-                Console.WriteLine(f);
-            Console.WriteLine("\nUNFOUND: ----------------------------------");
-            var unfound = gameInfoNameList.Where(x => !filteredNames.Contains(x));
-            foreach (var f in unfound)
-                Console.WriteLine(f);
-            var prices1 =
-                GetPricesV2(steamApps.Take(100).Select(f => f.AppId.ToString()))
+            var collection = new BlockingCollection<string>();
+
+            foreach (var app in steamApps.Take(100).Select(f => f.AppId.ToString()))
+                collection.Add(app);
+
+            var prices2 =
+                GetPriceOverViews(steamApps.Take(100).Select(f => f.AppId.ToString()))
                     .Where(t => t.Currency != null)
                     .ToList();
-            //var prices2 =
-            //    GetPriceOverViews(steamApps.Take(1000).Select(f => f.AppId.ToString()))
-            //        .Where(t => t.Currency != null)
-            //        .ToList();
-           
+
             Console.ReadLine();
         }
 
@@ -79,21 +67,6 @@ namespace ConsoleApplication2
             var steamClient = new SteamClient();
             var steamApplications = steamClient.GetCurrentApplicationList();
             return steamApplications.AppList.Apps;
-        }
-
-        private static IEnumerable<PriceOverview> GetPricesV2(IEnumerable<string> appIds)
-        {
-            var stopWatch = new Stopwatch();
-            stopWatch.Start();
-            var steamClient = new SteamClient();
-            var results = new List<PriceOverview>();
-            var enumerable = appIds as string[] ?? appIds.ToArray();
-            enumerable.ForEachAsync(s => steamClient.GetPriceOverview(s, "ru"), (url, t) => results.Add(t));
-            stopWatch.Stop();
-            Console.WriteLine("Requests sent: {0}, Time elapsed: {1} milliseconds", enumerable.Count(),
-                stopWatch.ElapsedMilliseconds);
-            Console.WriteLine("Avg. time spent per request: {0}", stopWatch.ElapsedMilliseconds / enumerable.Count());
-            return results;
         }
     }
 
